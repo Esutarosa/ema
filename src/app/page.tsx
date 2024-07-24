@@ -1,12 +1,12 @@
 import type { FC } from 'react';
 
-interface HomeProps { }
+import DefaultLayout from '@/components/layouts/DefaultLayout';
 
-const Home: FC<HomeProps> = ({ }) => {
+const Home: FC = () => {
   return (
-    <div>
+    <DefaultLayout>
       Home
-    </div>
+    </DefaultLayout>
   );
 }
 
