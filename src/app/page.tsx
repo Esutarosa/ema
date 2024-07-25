@@ -1,12 +1,13 @@
 import type { FC } from 'react';
 
-import DefaultLayout from '@/components/layouts/DefaultLayout';
+import { Hero } from '@/components/hero';
+import { Layout } from '@/components/layouts';
 
 const Home: FC = () => {
   return (
-    <DefaultLayout>
-      Home
-    </DefaultLayout>
+    <Layout>
+      <Hero />
+    </Layout>
   );
 }
 

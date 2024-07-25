@@ -6,13 +6,13 @@ import { Header } from '@/components/header';
 
 import { cn } from '@/helpers/cn';
 
-interface DefaultLayoutProps extends PropsWithChildren {
+interface LayoutProps extends PropsWithChildren {
   isHideHeader?: boolean;
   isHideFooter?: boolean;
   className?: string;
 }
 
-const DefaultLayout: FC<DefaultLayoutProps> = ({
+const Layout: FC<LayoutProps> = ({
   isHideHeader,
   isHideFooter,
   className,
@@ -28,4 +28,4 @@ const DefaultLayout: FC<DefaultLayoutProps> = ({
   );
 }
 
-export default DefaultLayout;
+export default Layout;

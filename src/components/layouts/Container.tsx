@@ -6,12 +6,12 @@ interface ContainerProps extends PropsWithChildren {
   className?: string;
 }
 
-const Container: FC<ContainerProps> = ({ children, className }) => {
+const Container: FC<ContainerProps> = ({ children, className, ...props }) => {
   return (
     <div className={cn(
-      'container',
+      'container px-3 py-14 md:py-20',
       className
-    )}>
+    )} {...props}>
       {children}
     </div>
   );

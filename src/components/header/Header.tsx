@@ -6,8 +6,8 @@ import Link from 'next/link';
 
 import { headerData as data } from '@/data/content';
 
-import HeaderMobile from '@/components/header/HeaderMobile';
-import HeaderDesktop from '@/components/header/HeaderDesktop';
+import { HeaderMobile } from '@/components/header';
+import { HeaderDesktop } from '@/components/header';
 
 import useIsDesktop from '@/hooks/useIsDesktop';
 import useScrollPosition from '@/hooks/useScrollPosition';
@@ -26,7 +26,7 @@ const Header: FC<HeaderProps> = ({
 
   return (
     <header className={cn(
-      'fixed top-0 left-0 right-0 z-50 px-3',
+      'fixed top-0 left-0 right-0 z-50',
       'transition-colors duration-300 font-semibold',
       isScrolled ? 'bg-background' : 'bg-transparent',
       isHideHeader && 'hidden',
