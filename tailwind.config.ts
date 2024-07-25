@@ -15,6 +15,9 @@ const config: Config = {
       },
     },
     extend: {
+      screens: {
+        '3xl': '2000px',
+      },
       colors: {
         primary: 'hsl(var(--primary))',
         muted: 'hsl(var(--muted))',
