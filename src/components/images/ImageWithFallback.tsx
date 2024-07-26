@@ -83,12 +83,12 @@ const ImageWithFallback: FC<ImageWithFallbackProps> = ({
           'absolute inset-0',
           'overflow-hidden',
           'transition-opacity duration-300 ease-in',
-          !(true && blurDataURL) && 'bg-background',
+          !(isLoading || shouldDebugImageFallbacks) && blurDataURL && 'bg-background',
           (isLoading || shouldDebugImageFallbacks)
             ? 'opacity-100'
             : 'opacity-0',
         )}>
-          {(true && blurDataURL)
+          {(blurDataURL)
             ? <img {...{
               ...props,
               src: blurDataURL,

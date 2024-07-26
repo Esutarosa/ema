@@ -1,19 +1,16 @@
 'use client';
 
 import type { FC } from 'react';
+import type { TDustcellImages } from '@/types/TDustcellImages';
 
-import {
-  GridItem,
-  GridSite,
-  type GridItems,
-} from '@/components/grid';
+import { GridItem, GridSite } from '@/components/grid';
 
 import AnimateItems from '@/components/AnimateItems';
 
 import { cn } from '@/helpers/cn';
 
 interface GridProps {
-  items?: GridItems[];
+  items?: TDustcellImages[];
   header?: JSX.Element;
   sidebar?: JSX.Element;
 }

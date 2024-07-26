@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import type { GridItems } from '@/components/grid';
+import type { TDustcellImages } from '@/types/TDustcellImages';
 
 import AnimateItems from '@/components/AnimateItems';
 import { ImageWithFallback } from '@/components/images';
@@ -9,7 +9,7 @@ import Link from 'next/link';
 import { cn } from '@/helpers/cn';
 
 interface GridItemProps {
-  items: GridItems[];
+  items: TDustcellImages[];
   small?: boolean;
   animate?: boolean;
   canStart?: boolean;
@@ -29,7 +29,7 @@ const GridItem: FC<GridItemProps> = ({
   staggerOnFirstLoadOnly = true,
   onAnimationComplete,
 }) => {
-  const isHighDensity = items.length > 10;
+  const isHighDensity = items.length > 40;
 
   return (
     <AnimateItems
@@ -39,7 +39,7 @@ const GridItem: FC<GridItemProps> = ({
           ? 'grid-cols-3 xs:grid-cols-6'
           : isHighDensity
             ? 'grid-cols-2 xs:grid-cols-4 lg:grid-cols-6'
-            : 'grid-cols-2 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4',
+            : 'grid-cols-2 sm:grid-cols-4',
         'items-center',
       )}
       type={animate ? undefined : 'none'}
@@ -51,14 +51,14 @@ const GridItem: FC<GridItemProps> = ({
       staggerOnFirstLoadOnly={staggerOnFirstLoadOnly}
       onAnimationComplete={onAnimationComplete}
       items={items.map((item, index) => (
-        <Link href={item.href || '#'} key={index}>
+        <Link href={item.href || ''} key={index} target='_blank'>
           {item.src ? (
             <ImageWithFallback
               src={item.src}
               alt={item.alt || 'DUSTCELL COVER'}
               width={600}
               height={400}
-              blurDataURL='/path/to/low-res-image.jpg'
+              blurDataURL='/images/blur.png'
               blurCompatibilityLevel='high'
               imgClassName='w-[600px] object-cover rounded-sm shadow-lg'
               priority

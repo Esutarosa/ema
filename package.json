@@ -15,6 +15,8 @@
     "@nextui-org/popover": "^2.1.27",
     "@nextui-org/system": "^2.2.5",
     "@nextui-org/theme": "^2.2.9",
+    "@supabase/ssr": "^0.4.0",
+    "@supabase/supabase-js": "^2.44.4",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.17",
     "next": "14.2.3",
