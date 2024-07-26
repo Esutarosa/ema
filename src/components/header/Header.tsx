@@ -1,10 +1,10 @@
 'use client';
 
-import { type FC } from 'react';
+import type { FC } from 'react';
 
 import Link from 'next/link';
 
-import { headerData as data } from '@/data/content';
+import { siteConfig } from '@/config/site';
 
 import { HeaderMobile } from '@/components/header';
 import { HeaderDesktop } from '@/components/header';
@@ -46,9 +46,9 @@ const Header: FC<HeaderProps> = ({
         </div>
         <div className='md:col-start-3 space-x-3'>
           {!isDesktop ? (
-            <HeaderMobile data={data} />
+            <HeaderMobile data={siteConfig.navItems} />
           ) : (
-            <HeaderDesktop data={data} />
+            <HeaderDesktop data={siteConfig.navItems} />
           )}
         </div>
       </div>

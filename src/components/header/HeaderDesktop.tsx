@@ -5,7 +5,7 @@ import LinkWithArrow from '@/components/LinkWithArrow';
 interface HeaderDesktopProps {
   data: {
     href: string;
-    content: string;
+    label: string;
     target: string | undefined;
   }[];
 }
@@ -18,7 +18,7 @@ const HeaderDesktop: FC<HeaderDesktopProps> = ({ data }) => {
           <LinkWithArrow
             key={index}
             href={item.href}
-            content={item.content}
+            content={item.label}
             target={item.target}
           />
         ))}

@@ -2,6 +2,9 @@ import type { FC, PropsWithChildren } from 'react';
 import type { Metadata } from 'next';
 
 import { NextUIProvider } from '@/providers';
+import { poppins } from '@/config/fonts';
+
+import { cn } from '@/helpers/cn';
 
 import '@/styles/globals.css';
 
@@ -14,8 +17,11 @@ interface layoutProps extends PropsWithChildren { }
 
 const layout: FC<layoutProps> = ({ children }) => {
   return (
-    <html lang='en'>
-      <body className='bg-background text-foreground font-sans'>
+    <html lang='en' suppressHydrationWarning>
+      <body className={cn(
+        'bg-background text-foreground font-poppins',
+        poppins.className
+      )}>
         <NextUIProvider>
           {children}
         </NextUIProvider>

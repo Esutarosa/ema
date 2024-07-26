@@ -13,7 +13,7 @@ import LinkWithArrow from '@/components/LinkWithArrow';
 interface HeaderMobileProps {
   data: {
     href: string;
-    content: string;
+    label: string;
     target: string | undefined;
   }[];
 }
@@ -28,7 +28,7 @@ const HeaderMobile: FC<HeaderMobileProps> = ({ data }) => {
             <LinkWithArrow
               key={index}
               href={item.href}
-              content={item.content}
+              content={item.label}
               target={item.target}
             />
           ))}

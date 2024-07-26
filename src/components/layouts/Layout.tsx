@@ -21,7 +21,7 @@ const Layout: FC<LayoutProps> = ({
   return (
     <>
       <Header isHideHeader={isHideHeader} />
-      <main className={cn('min-h-screen min-w-[220px] bg-background', className)}>
+      <main className={cn('min-h-screen min-w-[220px]', className)}>
         {children}
       </main>
     </>
