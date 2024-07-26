@@ -89,7 +89,7 @@ const ImageWithFallback: FC<ImageWithFallbackProps> = ({
             : 'opacity-0',
         )}>
           {(blurDataURL)
-            ? <img {...{
+            ? <Image {...{
               ...props,
               src: blurDataURL,
               className: cn(
@@ -110,6 +110,7 @@ const ImageWithFallback: FC<ImageWithFallbackProps> = ({
         className: imgClassName,
         onLoad,
         onError,
+        alt: 'Image',
       }} />
     </div>
   );

@@ -37,9 +37,8 @@ const Footer: FC<FooterProps> = ({ isHideFooter }) => {
         </div>
         <nav className='flex flex-col space-y-1 col-start-1 col-end-13 md:col-start-7 md:col-end-9'>
           {siteConfig.links.emaLinks.map((link, index) => (
-            <p className='flex gap-4'>
+            <p className='flex gap-4' key={index}>
               <LinkWithArrow
-                key={index}
                 href={link.href}
                 content={link.label}
                 target={link.target}

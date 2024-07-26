@@ -31,7 +31,7 @@ const HeroSlider: FC = () => {
         ))}
       />
       <AnimateItems className='absolute inset-0 flex items-center justify-center z-20'>
-        <h1 className='text-9xl lg:text-[144px] font-bold text-foreground z-50 text-center select-none'>
+        <h1 className='text-9xl font-bold text-foreground z-50 text-center select-none'>
           エマ
         </h1>
       </AnimateItems>

@@ -3,6 +3,7 @@
 import {
   useEffect,
   useRef,
+  useCallback,
   type FC,
   type HTMLAttributes
 } from 'react';
@@ -37,11 +38,7 @@ const CardItem: FC<CardItemProps> = ({
   const ref = useRef<HTMLDivElement>(null);
   const [isMouseEntered] = useMouseEnter();
 
-  useEffect(() => {
-    handleAnimations();
-  }, [isMouseEntered]);
-
-  const handleAnimations = () => {
+  const handleAnimations = useCallback(() => {
     if (!ref.current) return;
     if (isMouseEntered) {
       ref.current.style.transform = `
@@ -60,7 +57,11 @@ const CardItem: FC<CardItemProps> = ({
       rotateY(0deg) 
       rotateZ(0deg)`;
     }
-  };
+  }, [isMouseEntered, translateX, translateY, translateZ, rotateX, rotateY, rotateZ]);
+
+  useEffect(() => {
+    handleAnimations();
+  }, [handleAnimations]);
 
   return (
     <Tag
