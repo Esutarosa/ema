@@ -4,7 +4,8 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger
-} from '@nextui-org/react';
+} from '@nextui-org/popover';
+
 import { Bars2Icon } from '@heroicons/react/24/solid';
 
 import LinkWithArrow from '@/components/LinkWithArrow';
@@ -42,7 +43,7 @@ const HeaderMobile: FC<HeaderMobileProps> = ({ data }) => {
   }
 
   return (
-    <Popover placement='bottom' offset={24}>
+    <Popover placement='bottom' backdrop='blur' offset={24}>
       <PopoverTrigger>
         <Bars2Icon className='2xl:hidden cursor-pointer size-6' />
       </PopoverTrigger>

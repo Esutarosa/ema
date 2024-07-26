@@ -1,6 +1,8 @@
 import type { FC, PropsWithChildren } from 'react';
 import type { Metadata } from 'next';
 
+import { NextUIProvider } from '@/providers';
+
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
@@ -14,7 +16,9 @@ const layout: FC<layoutProps> = ({ children }) => {
   return (
     <html lang='en'>
       <body className='bg-background text-foreground font-sans'>
-        {children}
+        <NextUIProvider>
+          {children}
+        </NextUIProvider>
       </body>
     </html>
   );
