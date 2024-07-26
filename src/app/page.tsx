@@ -1,8 +1,8 @@
 import type { FC } from 'react';
 
-import { Hero } from '@/components/hero';
-
 import { Layout } from '@/components/layouts';
+
+import { Hero } from '@/components/hero';
 
 const Home: FC = () => {
   return (

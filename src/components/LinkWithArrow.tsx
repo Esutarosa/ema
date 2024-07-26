@@ -9,12 +9,14 @@ import { cn } from '@/helpers/cn';
 interface LinkWithArrowProps extends LinkHTMLAttributes<HTMLAnchorElement> {
   href: string;
   target?: string;
+  className?: string;
 }
 
 const LinkWithArrow: FC<LinkWithArrowProps> = ({
   href,
   content,
   target,
+  className,
   ...props
 }) => {
   const isExternal = target === '_blank';
@@ -27,6 +29,7 @@ const LinkWithArrow: FC<LinkWithArrowProps> = ({
         'group group-hover/link:bg-primary/10 group-hover/link:text-primary group-hover/link:decoration-primary',
         'underline decoration-dotted dotted-underline decoration-foreground/30 underline-offset-4',
         'transition-colors',
+        className
       )}>
         {content}
       </span>

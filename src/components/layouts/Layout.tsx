@@ -3,6 +3,7 @@
 import type { FC, PropsWithChildren } from 'react';
 
 import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 
 import { cn } from '@/helpers/cn';
 
@@ -24,6 +25,7 @@ const Layout: FC<LayoutProps> = ({
       <main className={cn('min-h-screen min-w-[220px]', className)}>
         {children}
       </main>
+      <Footer isHideFooter={isHideFooter} />
     </>
   );
 }

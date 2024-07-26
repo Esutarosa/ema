@@ -5,13 +5,12 @@ import {
   type FC
 } from 'react';
 
-import Image from 'next/image';
-
 import {
   CardBody,
   CardContainer,
   CardItem
 } from '@/components/ui/abstract-card';
+import { Image } from "@nextui-org/image";
 
 import { cn } from '@/helpers/cn';
 

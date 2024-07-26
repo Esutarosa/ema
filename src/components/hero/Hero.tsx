@@ -7,7 +7,7 @@ import { HeroContent, HeroModal, HeroSlider } from '@/components/hero'
 const Hero: FC = () => {
   return (
     <Section>
-      <div className='relative h-screen md:h-[40em] lg:h-[50em] antialiased'>
+      <div className='relative h-screen 3xl:h-[50em] antialiased'>
         <HeroSlider />
         <HeroContent />
         <HeroModal />
