@@ -2,11 +2,13 @@ import type { FC } from 'react';
 
 import { Container, Section } from '@/components/layouts';
 
+import { Social } from '@/components/social';
+
 const SocialPage: FC = () => {
   return (
     <Section>
       <Container>
-        SocialPage
+        <Social />
       </Container>
     </Section>
   );

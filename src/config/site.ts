@@ -38,7 +38,44 @@ export const siteConfig = {
         target: '_blank',
       },
     ],
-    dustcellLink: {
+    dustcellLink: [
+      {
+        label: 'YouTube',
+        href: 'https://www.youtube.com/c/DUSTCELL',
+        target: '_blank',
+      },
+      {
+        label: 'Fun Club App "DUSTROOM"',
+        href: 'https://subscription.app.c-rayon.com/app/dustcell/home',
+        target: '_blank',
+      },
+      {
+        label: 'CD & GOODS',
+        href: 'https://findmestore.thinkr.jp/collections/dustcell',
+        target: '_blank',
+      },
+      {
+        label: 'DUSTCELL TOURS',
+        href: 'https://l-tike.com/concert/mevent/?mid=602764',
+        target: '_blank',
+      },
+      {
+        label: 'LINE',
+        href: 'https://page.line.me/011yqnoi?openQrModal=true',
+        target: '_blank',
+      },
+      {
+        label: 'TikTok',
+        href: 'https://www.tiktok.com/@dust_cell',
+        target: '_blank',
+      },
+      {
+        label: 'HP',
+        href: 'https://kamitsubaki.jp/',
+        target: '_blank',
+      },
+    ],
+    findmestore: {
       label: 'CD & GOODS',
       href: 'https://findmestore.thinkr.jp/collections/dustcell',
       target: '_blank',

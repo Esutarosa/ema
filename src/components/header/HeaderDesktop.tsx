@@ -29,9 +29,9 @@ const HeaderDesktop: FC<HeaderDesktopProps> = ({ data }) => {
             ))}
           </div>
           <LinkWithArrow
-            href={siteConfig.links.dustcellLink.href}
-            content={siteConfig.links.dustcellLink.label}
-            target={siteConfig.links.dustcellLink.target}
+            href={siteConfig.links.findmestore.href}
+            content={siteConfig.links.findmestore.label}
+            target={siteConfig.links.findmestore.target}
           />
         </div>
       </AnimateItems>

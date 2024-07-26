@@ -41,6 +41,10 @@
   @apply bg-background/70 rounded-full hover:bg-primary transition-colors;
 }
 
+::selection { 
+  @apply text-primary;
+}
+
 .vertical-japanese-text {
   writing-mode: vertical-rl;
   text-orientation: upright;
