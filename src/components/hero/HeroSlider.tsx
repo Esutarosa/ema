@@ -30,11 +30,11 @@ const HeroSlider: FC = () => {
           />
         ))}
       />
-      <div className='absolute inset-0 flex items-center justify-center z-10'>
-        <h1 className='text-9xl font-bold text-foreground z-50 text-center select-none'>
+      <AnimateItems className='absolute inset-0 flex items-center justify-center z-20'>
+        <h1 className='text-9xl lg:text-[144px] font-bold text-foreground z-50 text-center select-none'>
           エマ
         </h1>
-      </div>
+      </AnimateItems>
     </div>
   );
 }

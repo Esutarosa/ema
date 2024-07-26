@@ -13,9 +13,14 @@ const DustcellPage: FC = async () => {
         <Grid
           items={items}
           sidebar={
-            <div className='sticky top-14 space-y-4 mt-[-4px]'>
+            <div className='sticky top-36 space-y-4 mt-[-4px]'>
               <GridSidebar />
             </div>
+          }
+          header={
+            <h1 className='text-4xl'>
+              Collection of all albums
+            </h1>
           }
         />
       </Container>
