@@ -18,6 +18,30 @@ export const siteConfig = {
       label: 'SOCIAL MEDIA',
       href: '/social',
       target: undefined,
-    }
-  ]
-}
+    },
+  ],
+  links: {
+    emaLinks: [
+      {
+        label: 'Twitter',
+        href: 'https://twitter.com/eumza1',
+        target: '_blank',
+      },
+      {
+        label: 'Instagram',
+        href: 'https://www.instagram.com/301ye/',
+        target: '_blank',
+      },
+      {
+        label: 'YouTube',
+        href: 'https://www.youtube.com/@30IYE',
+        target: '_blank',
+      },
+    ],
+    dustcellLink: {
+      label: 'CD & GOODS',
+      href: 'https://findmestore.thinkr.jp/collections/dustcell',
+      target: '_blank',
+    },
+  },
+};

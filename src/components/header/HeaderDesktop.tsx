@@ -2,6 +2,8 @@ import type { FC } from 'react';
 
 import LinkWithArrow from '@/components/LinkWithArrow';
 
+import { siteConfig } from '@/config/site';
+
 interface HeaderDesktopProps {
   data: {
     href: string;
@@ -24,9 +26,9 @@ const HeaderDesktop: FC<HeaderDesktopProps> = ({ data }) => {
         ))}
       </div>
       <LinkWithArrow
-        href='https://findmestore.thinkr.jp/collections/dustcell'
-        content='CD & GOODS'
-        target='_blank'
+        href={siteConfig.links.dustcellLink.href}
+        content={siteConfig.links.dustcellLink.label}
+        target={siteConfig.links.dustcellLink.target}
       />
     </div>
   );
