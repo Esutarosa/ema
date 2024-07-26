@@ -25,7 +25,6 @@ const HeroContent: FC = () => {
             <p className='text-sm text-foreground/70'>
               Previously a singer, EMA writes and composes some of DUSTCELL&apos;s songs, often drawing from personal experiences. Influences include BTS and BLACKPINK internationally, and Hikaru Utada, amazarashi, and Avicii in Japan.
             </p>
-
           </AnimateItems>
         </div>
         <div className='col-start-2 lg:col-start-3'>

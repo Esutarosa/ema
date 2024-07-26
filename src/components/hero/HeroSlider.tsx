@@ -1,4 +1,8 @@
+'use client';
+
 import type { FC } from 'react';
+
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 import { heroImageData, heroSliderConfig } from '@/components/hero/HeroData';
 
@@ -8,16 +12,15 @@ import AnimateItems from '@/components/AnimateItems';
 import { cn } from '@/helpers/cn';
 
 const HeroSlider: FC = () => {
+  const isMobileOrTablet = useMediaQuery('(max-width: 1800px)');
+
   return (
     <div className={cn(
       'relative flex flex-col items-center justify-center h-full overflow-hidden',
       '[mask-image:linear-gradient(to_bottom,transparent,white_20%)]'
     )}>
-      <AnimateItems
-        duration={0.8}
-        staggerDelay={0.075}
-        distanceOffset={80}
-        items={heroSliderConfig.map((config, index) => (
+      {isMobileOrTablet ? (
+        heroSliderConfig.map((config, index) => (
           <InfiniteMovingCards
             key={index}
             pauseOnHover={false}
@@ -28,9 +31,27 @@ const HeroSlider: FC = () => {
               '-rotate-[12.5deg] overflow-visible shadow-md'
             )}
           />
-        ))}
-      />
-      <AnimateItems className='absolute inset-0 flex items-center justify-center z-20'>
+        ))
+      ) : (
+        <AnimateItems
+          duration={0.8}
+          staggerDelay={0.075}
+          distanceOffset={80}
+          items={heroSliderConfig.map((config, index) => (
+            <InfiniteMovingCards
+              key={index}
+              pauseOnHover={false}
+              direction={config.direction}
+              speed={config.speed}
+              images={heroImageData.slice(config.startIndex, config.startIndex + config.count)}
+              className={cn(
+                '-rotate-[12.5deg] overflow-visible shadow-md'
+              )}
+            />
+          ))}
+        />
+      )}
+      <AnimateItems className='absolute inset-0 flex items-center justify-center z-10 2xl:z-20'>
         <h1 className='text-9xl font-bold text-foreground z-50 text-center select-none'>
           エマ
         </h1>

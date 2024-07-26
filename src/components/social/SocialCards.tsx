@@ -22,7 +22,7 @@ const SocialCards: FC<SocialCardsProps> = ({ ema, dustcell }) => {
       <AnimateItems
         className='flex flex-col items-center justify-center gap-4'
         items={dustcell.map((item, index) => (
-          <Link href={item.href} key={index}>
+          <Link href={item.href} key={index} target={item.target}>
             <Panel hasActiveOnHover className='group/panel w-[220px] sm:w-[320px] lg:w-[520px]'>
               <span>{item.label}</span>
             </Panel>
@@ -33,7 +33,7 @@ const SocialCards: FC<SocialCardsProps> = ({ ema, dustcell }) => {
       <AnimateItems
         className='flex flex-col items-center justify-center gap-4'
         items={ema.map((item, index) => (
-          <Link href={item.href} key={index}>
+          <Link href={item.href} key={index} target={item.target}>
             <Panel hasActiveOnHover className='group/panel w-[220px] sm:w-[320px] lg:w-[520px]'>
               <span>{item.label}</span>
             </Panel>

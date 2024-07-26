@@ -106,7 +106,6 @@ const InfiniteMovingCards: FC<InfiniteMovingCardsProps> = ({
                 <Image
                   src={image}
                   alt={'Slider Image' + ' ' + index}
-                  objectFit='cover'
                   width={305}
                   height={172}
                   className='w-full h-full object-cover rounded-md'
