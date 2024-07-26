@@ -49,12 +49,14 @@ const Footer: FC<FooterProps> = ({ isHideFooter }) => {
         </nav>
         <div className='flex flex-col space-y-1 col-start-1 col-end-13 md:col-start-9'>
           <p className='text-xs text-foreground/70'>All rights reserved</p>
-          <LinkWithArrow
-            href='https://github.com/Esutarosa/EMA'
-            content='GitHub'
-            target='_blank'
-            className='text-xs text-foreground/70'
-          />
+          <span className='flex flex-row'>
+            <LinkWithArrow
+              href='https://github.com/Esutarosa/EMA'
+              content='GitHub'
+              target='_blank'
+              className='text-xs text-foreground/70'
+            />
+          </span>
         </div>
       </Section>
       <InfiniteMovingCards />

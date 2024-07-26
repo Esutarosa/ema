@@ -6,8 +6,7 @@ import Link from 'next/link';
 
 import { siteConfig } from '@/config/site';
 
-import { HeaderMobile } from '@/components/header';
-import { HeaderDesktop } from '@/components/header';
+import { HeaderMobile, HeaderDesktop } from '@/components/header';
 
 import useIsDesktop from '@/hooks/useIsDesktop';
 import useScrollPosition from '@/hooks/useScrollPosition';
@@ -33,7 +32,7 @@ const Header: FC<HeaderProps> = ({
     )}>
       <div className={cn(
         'w-full flex justify-between 2xl:grid items-center container mx-auto border-b border-muted px-3 py-3',
-        'grid-cols-1 md:grid-cols-3 transition-[border]',
+        'grid-cols-1 md:grid-cols-3 transition-colors duration-300',
         isScrolled ? 'border-b border-muted' : 'border-b-0',
       )}>
         <div className='md:col-start-1'>
