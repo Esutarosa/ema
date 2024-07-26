@@ -33,6 +33,14 @@
   }
 }
 
+::-webkit-scrollbar {
+  @apply bg-muted w-1.5;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-background/70 rounded-full hover:bg-primary transition-colors;
+}
+
 .vertical-japanese-text {
   writing-mode: vertical-rl;
   text-orientation: upright;
