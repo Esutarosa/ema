@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 
 import LinkWithArrow from '@/components/LinkWithArrow';
+import AnimateItems from '@/components/AnimateItems';
 
 import { siteConfig } from '@/config/site';
 
@@ -14,23 +15,27 @@ interface HeaderDesktopProps {
 
 const HeaderDesktop: FC<HeaderDesktopProps> = ({ data }) => {
   return (
-    <div className='hidden 2xl:flex 2xl:justify-between w-full'>
-      <div className='2xl:flex 2xl:gap-3 uppercase'>
-        {data.map((item, index) => (
+    <>
+      <AnimateItems>
+        <div className='hidden 2xl:flex 2xl:justify-between w-full'>
+          <div className='2xl:flex 2xl:gap-3 uppercase'>
+            {data.map((item, index) => (
+              <LinkWithArrow
+                key={index}
+                href={item.href}
+                content={item.label}
+                target={item.target}
+              />
+            ))}
+          </div>
           <LinkWithArrow
-            key={index}
-            href={item.href}
-            content={item.label}
-            target={item.target}
+            href={siteConfig.links.dustcellLink.href}
+            content={siteConfig.links.dustcellLink.label}
+            target={siteConfig.links.dustcellLink.target}
           />
-        ))}
-      </div>
-      <LinkWithArrow
-        href={siteConfig.links.dustcellLink.href}
-        content={siteConfig.links.dustcellLink.label}
-        target={siteConfig.links.dustcellLink.target}
-      />
-    </div>
+        </div>
+      </AnimateItems>
+    </>
   );
 }
 
