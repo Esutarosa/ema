@@ -12,6 +12,7 @@ import Image from 'next/image';
 import { cn } from '@/helpers/cn';
 
 interface InfiniteMovingCardsProps {
+  items?: string[];
   images?: string[];
   direction?: 'left' | 'right';
   speed?: 'fast' | 'normal' | 'slow' | string;
@@ -27,6 +28,7 @@ const speedMap: Record<string, string> = {
 };
 
 const InfiniteMovingCards: FC<InfiniteMovingCardsProps> = ({
+  items,
   images,
   direction = 'left',
   speed = 'fast',
@@ -113,7 +115,16 @@ const InfiniteMovingCards: FC<InfiniteMovingCardsProps> = ({
             </li>
           ))
         )}
-        {/* TODO: add items in a feature */}
+        {items && (
+          items.map((item, index) => (
+            <li key={index} className={cn(
+              'max-w-full',
+              'relative rounded-2xl flex-shrink-0 pointer-events-none select-none',
+            )}>
+              {item}
+            </li>
+          ))
+        )}
       </ul>
     </div>
   );

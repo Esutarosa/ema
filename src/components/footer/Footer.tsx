@@ -59,7 +59,28 @@ const Footer: FC<FooterProps> = ({ isHideFooter }) => {
           </span>
         </div>
       </Section>
-      <InfiniteMovingCards />
+      <InfiniteMovingCards
+        speed='slow'
+        pauseOnHover={false}
+        maskImage={false}
+        className='text-foreground/20 hover:text-primary/70 text-xs'
+        items={[
+          '_▞▚▞▚▞▚▞_',
+          'EMA',
+          '_▞▚▞▚▞▚▞_',
+          'NEXT.JS',
+          '_▞▚▞▚▞▚▞_',
+          'EMA',
+          '_▞▚▞▚▞▚▞_',
+          'DUSTCELL',
+          '_▞▚▞▚▞▚▞_',
+          'COPYRIGHT 2024',
+          '_▞▚▞▚▞▚▞_',
+          'ESUTAROSA',
+          '_▞▚▞▚▞▚▞_',
+          'CATS ARE CUTE',
+        ]}
+      />
     </footer>
   );
 }
