@@ -1,10 +1,8 @@
 import type { FC } from 'react';
 
-import { Section, Container } from '@/components/layouts';
+import { Section } from '@/components/layouts';
 
-import { HeroAvatars, HeroContent, HeroSlider } from '@/components/hero'
-
-import { cn } from '@/helpers/cn';
+import { HeroContent, HeroSlider } from '@/components/hero'
 
 const Hero: FC = () => {
   return (
