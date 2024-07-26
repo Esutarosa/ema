@@ -23,7 +23,7 @@ const HeaderMobile: FC<HeaderMobileProps> = ({ data }) => {
   const Content = () => {
     return (
       <PopoverContent className='bg-background border border-muted p-2 rounded-md'>
-        <div className='flex flex-col gap-3 backdrop-blur-[20px] '>
+        <div className='flex flex-col gap-3 backdrop-blur-[20px] uppercase'>
           {data.map((item, index) => (
             <LinkWithArrow
               key={index}

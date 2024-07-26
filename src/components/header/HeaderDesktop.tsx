@@ -13,7 +13,7 @@ interface HeaderDesktopProps {
 const HeaderDesktop: FC<HeaderDesktopProps> = ({ data }) => {
   return (
     <div className='hidden 2xl:flex 2xl:justify-between w-full'>
-      <div className='2xl:flex 2xl:gap-3'>
+      <div className='2xl:flex 2xl:gap-3 uppercase'>
         {data.map((item, index) => (
           <LinkWithArrow
             key={index}
